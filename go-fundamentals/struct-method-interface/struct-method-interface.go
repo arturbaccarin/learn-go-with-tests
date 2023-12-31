@@ -31,3 +31,12 @@ func Perimeter(rectangle Rectangle) float64 {
 func Area(rectangle Rectangle) float64 {
 	return rectangle.Width * rectangle.Height
 }
+
+type Triangle struct {
+	Base   float64
+	Height float64
+}
+
+func (t Triangle) Area() float64 {
+	return (t.Base * t.Height) * 0.5
+}
