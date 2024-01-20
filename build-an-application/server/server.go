@@ -6,6 +6,11 @@ import (
 	"strings"
 )
 
+// It doesn't feel right that our server knows the scores.
+/*
+We moved the score calculation out of the main body of our handler into a function GetPlayerScore.
+This feels like the right place to separate the concerns using interfaces.
+*/
 // PlayerStore stores score information about players.
 type PlayerStore interface {
 	GetPlayerScore(name string) int
