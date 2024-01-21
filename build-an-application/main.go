@@ -7,7 +7,13 @@ import (
 	"github.com/arturbaccarin/learn-go-with-tests/build-an-application/server"
 )
 
+type InMemoryPlayerStore struct{}
+
+func (i *InMemoryPlayerStore) GetPlayerScore(name string) int {
+	return 123
+}
+
 func main() {
-	server := &server.PlayerServer{}
+	server := &server.PlayerServer{Store: &InMemoryPlayerStore{}}
 	log.Fatal(http.ListenAndServe(":5000", server))
 }
