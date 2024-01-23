@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/arturbaccarin/learn-go-with-tests/build-an-application/server"
+	"github.com/arturbaccarin/learn-go-with-tests/build-an-application/http-server/server"
 )
 
 func main() {
