@@ -23,14 +23,14 @@ type Player struct {
 
 // PlayerServer is a HTTP interface for player information
 type PlayerServer struct {
-	store PlayerStore
+	store FileSystemPlayerStore
 	http.Handler
 }
 
 const jsonContentType = "application/json"
 
 // NewPlayerServer creates a PlayerServer with routing configured
-func NewPlayerServer(store PlayerStore) *PlayerServer {
+func NewPlayerServer(store FileSystemPlayerStore) *PlayerServer {
 	p := new(PlayerServer)
 
 	p.store = store
