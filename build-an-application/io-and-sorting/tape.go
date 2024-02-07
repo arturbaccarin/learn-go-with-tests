@@ -1,12 +1,13 @@
 package main
 
-import "io"
+import "os"
 
 type tape struct {
-	file io.ReadWriteSeeker
+	file *os.File
 }
 
 func (t *tape) Write(p []byte) (n int, err error) {
+	t.file.Truncate(0) // will let us effectively empty the file
 	t.file.Seek(0, 0)
 	return t.file.Write(p)
 }
