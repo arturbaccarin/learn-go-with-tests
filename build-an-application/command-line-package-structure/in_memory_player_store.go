@@ -1,5 +1,5 @@
 // in_memory_player_store.go
-package commandlinepackagestructure
+package poker
 
 func NewInMemoryPlayerStore() *InMemoryPlayerStore {
 	return &InMemoryPlayerStore{map[string]int{}}

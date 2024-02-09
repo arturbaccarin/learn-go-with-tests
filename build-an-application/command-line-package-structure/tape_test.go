@@ -1,4 +1,4 @@
-package commandlinepackagestructure
+package poker
 
 import (
 	"io"
