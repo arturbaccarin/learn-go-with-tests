@@ -1,10 +1,10 @@
 package main
 
 import (
-	poker "commandlinepackagestructure"
 	"log"
 	"net/http"
 	"os"
+	"poker"
 )
 
 const dbFileName = "game.db.json"
